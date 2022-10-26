@@ -27,7 +27,7 @@ void taskLedBlink(void *Param)
             printf("LED OFF\n");
         }
         gpio_set_level(BLINK_GPIO, s_led_state);
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
 

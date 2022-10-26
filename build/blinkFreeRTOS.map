@@ -13902,10 +13902,10 @@ LOAD c:/espressif/tools/xtensa-esp32-elf/esp-2021r2-patch3-8.4.0/xtensa-esp32-el
                 0x00000000400d4bb8                esp_time_impl_init
  *fill*         0x00000000400d4bc0        0x0 
  .text.taskLedBlink
-                0x00000000400d4bc0       0x3e esp-idf/main/libmain.a(blink_example_main.c.obj)
-                                         0x48 (size before relaxing)
+                0x00000000400d4bc0       0x3f esp-idf/main/libmain.a(blink_example_main.c.obj)
+                                         0x47 (size before relaxing)
                 0x00000000400d4bc0                taskLedBlink
- *fill*         0x00000000400d4bfe        0x2 
+ *fill*         0x00000000400d4bff        0x1 
  .text.configure_led
                 0x00000000400d4c00       0x14 esp-idf/main/libmain.a(blink_example_main.c.obj)
                                          0x18 (size before relaxing)
@@ -14609,6 +14609,7 @@ LOAD c:/espressif/tools/xtensa-esp32-elf/esp-2021r2-patch3-8.4.0/xtensa-esp32-el
  .text.__cxa_guard_dummy
                 0x00000000400e543c        0x5 esp-idf/cxx/libcxx.a(cxx_guards.cpp.obj)
                 0x00000000400e543c                __cxa_guard_dummy
+ *fill*         0x00000000400e5441        0x0 
  *fill*         0x00000000400e5441        0x0 
  *fill*         0x00000000400e5441        0x0 
  *fill*         0x00000000400e5441        0x3 
