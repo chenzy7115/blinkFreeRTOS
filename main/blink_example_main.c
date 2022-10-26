@@ -9,9 +9,9 @@
 #include "led_strip.h"
 #include "sdkconfig.h"
 
-#define BLINK_GPIO 2
+#define BLINK_GPIO 2 //定义GPIO
 
-static uint8_t s_led_state = 0;
+static uint8_t s_led_state = 0; //高低电平控制变量
 
 void taskLedBlink(void *Param)
 {
@@ -26,16 +26,16 @@ void taskLedBlink(void *Param)
         {
             printf("LED OFF\n");
         }
-        gpio_set_level(BLINK_GPIO, s_led_state);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        gpio_set_level(BLINK_GPIO, s_led_state);//设置指定GPIO的状态
+        vTaskDelay(pdMS_TO_TICKS(500));//控制闪烁频率，500MS转换一次
     }
 }
 
-static void configure_led(void)
+static void configure_led(void)//初始化GPIO
 {
-    gpio_reset_pin(BLINK_GPIO);
+    gpio_reset_pin(BLINK_GPIO);//重置GPIO状态，上拉
     /* Set the GPIO as a push/pull output */
-    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);//设置GPIO为OUTPUT模式
 }
 
 void app_main(void)
